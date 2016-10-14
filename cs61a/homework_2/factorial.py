@@ -20,7 +20,7 @@ def factorial(n):
     >>> factorial(6)
     720
     >>> from construct_check import check
-    >>> check ('factorial', ['Recursion', 'For', 'While'])
+    >>> check ('factorial.py','factorial', ['Recursion', 'For', 'While'])
     True
     """
     return product(n,identity)
