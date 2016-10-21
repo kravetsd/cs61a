@@ -50,3 +50,22 @@ def select_dice(score, opponent_score):
     else:
         return six_sided
     # END Question 3
+def get_str_dig(dig,swap=True):
+    if dig <10 :
+        return str(dig)
+    elif swap == True:
+        return str(dig % 10), str(dig//10)
+    else :
+        return str(dig // 10), str(dig % 10)
+    
+def is_swap(score0, score1):
+    """Returns whether the last two digits of SCORE0 and SCORE1 are reversed
+    versions of each other, such as 19 and 91.
+    """
+    # BEGIN Question 4
+    if get_str_dig(score0) == get_str_dig(score1,swap=False):
+        return True
+    else:
+        return False
+    # END Question 4
+    
