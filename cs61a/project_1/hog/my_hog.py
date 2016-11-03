@@ -69,3 +69,16 @@ def is_swap(score0, score1):
         return False
     # END Question 4
     
+def other(player):
+    """Return the other player, for a player PLAYER numbered 0 or 1.
+
+    >>> other(0)
+    1
+    >>> other(1)
+    0
+    """
+    if player == 0:
+        return 1
+    elif player ==1:
+        return 0
+    
