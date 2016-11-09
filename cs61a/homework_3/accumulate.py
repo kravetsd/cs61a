@@ -22,3 +22,7 @@ def accumulate(combiner, base, n, term):
     if n==0:
         return base
     return combiner(accumulate(combiner,base,n-1,term),term(n))
+def summation_using_accumulate(n, term):
+    return accumulate(add,0,n,term)
+def product_using_accumulate(n,term):
+    return accumulate(mul,1,n,term)
